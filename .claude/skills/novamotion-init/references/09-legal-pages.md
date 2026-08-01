@@ -8,9 +8,9 @@ Update Privacy Policy and Terms of Service with brand information.
 File: `src/app/[locale]/(marketing)/privacy/page.tsx`
 
 Replacements:
-- All `"VideoFly"` → `{projectName}`
-- `"support@videofly.app"` → `{supportEmail}`
-- `"privacy@videofly.app"` → `privacy@{domain}`
+- All `"NovaMotion"` → `{projectName}`
+- `"support@yourdomain.com"` → `{settings.supportEmail}` (dynamic from site_settings)
+- `"privacy@yourdomain.com"` → `{settings.supportEmail}` (dynamic from site_settings)
 - Effective date → today's date (format: Month DD, YYYY / YYYY年M月D日)
 - Keep the bilingual inline structure: `{locale === "zh" ? <Chinese> : <English>}`
 

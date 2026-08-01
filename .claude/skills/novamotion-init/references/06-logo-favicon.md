@@ -17,7 +17,7 @@ Present options to user via AskUserQuestion, then execute chosen approach.
 ## Option A: SVG Monogram (Recommended)
 
 1. Ask user: shape preference (circle / rounded-square / shield)
-2. Read template from `.claude/skills/videofly-init/templates/favicon-svg-{shape}.svg`
+2. Read template from `.claude/skills/novamotion-init/templates/favicon-svg-{shape}.svg`
 3. Compute foreground color (white for dark primary, black for light primary):
    - Parse `primaryColorHex` to RGB
    - Calculate relative luminance: `L = 0.2126*R + 0.7152*G + 0.0722*B`
@@ -42,7 +42,7 @@ Present options to user via AskUserQuestion, then execute chosen approach.
 1. Check: `python3 -c "import PIL"` — if fails, run `pip install Pillow`
 2. Run:
    ```bash
-   python3 .claude/skills/videofly-init/scripts/generate-logo.py \
+   python3 .claude/skills/novamotion-init/scripts/generate-logo.py \
      --brand-name "{projectName}" \
      --primary-color "{primaryColorHex}" \
      --public-dir "public"

@@ -373,3 +373,19 @@ export const VideoStatus = {
   FAILED: "FAILED",
 } as const;
 export type VideoStatus = (typeof VideoStatus)[keyof typeof VideoStatus];
+
+// 站点级可配置项（键值存储），供后台管理员动态配置品牌联系信息等
+export const siteSettings = pgTable(
+  "site_settings",
+  {
+    id: serial("id").primaryKey(),
+    key: text("key").notNull().unique(),
+    value: text("value"),
+    updatedAt: timestamp("updated_at").defaultNow().notNull(),
+  },
+  (table) => ({
+    keyIdx: uniqueIndex("site_settings_key_idx").on(table.key),
+  })
+);
+
+export type SiteSetting = typeof siteSettings.$inferSelect;

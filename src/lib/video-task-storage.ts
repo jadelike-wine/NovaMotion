@@ -11,6 +11,7 @@ export interface VideoTask {
 }
 
 class VideoTaskStorage {
+  // Legacy compatibility key. Do not rename without a migration.
   private readonly STORAGE_KEY = "videofly_video_tasks";
   private readonly EXPIRY_MS = 24 * 60 * 60 * 1000; // 24 hours
 

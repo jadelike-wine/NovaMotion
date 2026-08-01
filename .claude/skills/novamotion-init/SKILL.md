@@ -1,7 +1,7 @@
 ---
-name: videofly-init
+name: novamotion-init
 description: >
-  Comprehensive VideoFly template initialization. Handles brand config, dependency
+  Comprehensive NovaMotion template initialization. Handles brand config, dependency
   install, ENV setup, theme generation, SEO optimization, landing page customization
   with PatternCraft backgrounds, logo/favicon creation, OG image generation, sitemap
   verification, and legal pages. Use when user mentions "初始化项目", "init project",
@@ -9,7 +9,7 @@ description: >
   "配置模板", "template init", "rebrand", or "customize template".
 ---
 
-# VideoFly Template Initializer
+# NovaMotion Template Initializer
 
 Complete project initialization from brand info to production-ready site.
 

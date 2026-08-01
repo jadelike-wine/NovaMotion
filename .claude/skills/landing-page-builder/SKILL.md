@@ -198,7 +198,7 @@ Hero 包含 `VideoGeneratorInput`，通过 `defaults` 设置默认模型：
 
 - 默认沿用现有配色，Step 1 时用通俗语言主动告知用户
 - 所有组件使用语义 token（`bg-primary`、`text-primary-foreground` 等），不硬编码色值
-- 换色参考 videofly-init skill 的 Step 3 主题配色流程
+- 换色参考 novamotion-init skill 的 Step 3 主题配色流程
 
 ## 核心设计约束
 

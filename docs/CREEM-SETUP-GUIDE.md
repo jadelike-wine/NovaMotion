@@ -38,7 +38,7 @@ CREEM_WEBHOOK_SECRET='your-webhook-secret'
 ```bash
 # 应用 URL（重要：Webhook 回调地址）
 NEXT_PUBLIC_APP_URL='http://localhost:3000'  # 开发环境
-# NEXT_PUBLIC_APP_URL='https://videofly.app'  # 生产环境
+# NEXT_PUBLIC_APP_URL='https://yourdomain.com'  # 生产环境
 
 # 支付提供商
 NEXT_PUBLIC_BILLING_PROVIDER='creem'
@@ -173,7 +173,7 @@ Webhook 用于接收 Creem 的支付状态通知，自动为用户充值积分�
 https://localhost:3000/api/auth/creem/webhook
 
 # 生产环境
-https://videofly.app/api/auth/creem/webhook
+https://yourdomain.com/api/auth/creem/webhook
 ```
 
 ### 步骤 2：在 Creem 配置 Webhook
@@ -183,7 +183,7 @@ https://videofly.app/api/auth/creem/webhook
 3. 填写配置：
 
 ```yaml
-Endpoint URL: https://videofly.app/api/auth/creem/webhook
+Endpoint URL: https://yourdomain.com/api/auth/creem/webhook
 Events (选择以下事件):
   - checkout.completed ✅ (支付完成)
   - subscription.created ✅ (订阅创建)
@@ -448,4 +448,4 @@ WHERE user_id = 'your_user_id';
 ---
 
 *最后更新: 2026-02-02*
-*适用版本: VideoFly v1.0+*
+*适用版本: NovaMotion v1.0+*

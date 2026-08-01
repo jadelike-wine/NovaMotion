@@ -11,6 +11,7 @@ import { Switch } from "@/components/ui/switch";
 import { BillingFormButton } from "@/components/price/billing-form-button";
 import { priceDataMap, type SubscriptionPlanTranslation } from "@/config/price/price-data";
 import { useSigninModal } from "@/hooks/use-signin-modal";
+import { useSiteSettings } from "@/hooks/use-site-settings";
 import { UserSubscriptionPlan } from "@/types";
 import { LocaleLink } from "@/i18n/navigation";
 
@@ -28,6 +29,7 @@ export function PricingCards({
   const isYearlyDefault = true;
   const [isYearly, setIsYearly] = useState<boolean>(isYearlyDefault);
   const signInModal = useSigninModal();
+  const { supportEmail } = useSiteSettings();
   const pricingData = priceDataMap[locale] || priceDataMap['en'];
   const toggleBilling = () => {
     setIsYearly(!isYearly);
@@ -130,14 +132,20 @@ export function PricingCards({
 
       <p className="mt-3 text-center text-base text-muted-foreground">
         <Balancer>
-          Email{" "}
-          <a
-            className="font-medium text-primary hover:underline"
-            href="mailto:support@videofly.app"
-          >
-            support@videofly.app
-          </a>{" "}
-          {t('contact')}
+          {supportEmail ? (
+            <>
+              Email{" "}
+              <a
+                className="font-medium text-primary hover:underline"
+                href={`mailto:${supportEmail}`}
+              >
+                {supportEmail}
+              </a>{" "}
+              {t('contact')}
+            </>
+          ) : (
+            t('contact_no_email')
+          )}
           <br />
           <strong>{t('contact_2')}</strong>
         </Balancer>

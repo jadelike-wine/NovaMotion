@@ -1,7 +1,7 @@
 {
-  "name": "VideoFly",
-  "short_name": "VideoFly",
-  "description": "AI-powered video generation platform",
+  "name": "NovaMotion",
+  "short_name": "NovaMotion",
+  "description": "Create stunning AI videos with leading AI video generation models.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#0a0f0d",

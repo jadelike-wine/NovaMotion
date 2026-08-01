@@ -8,13 +8,13 @@ Apply in this exact order using Edit tool with `replace_all: true`:
 
 | # | Pattern | Replacement | Scope |
 |---|---------|-------------|-------|
-| 1 | `🎬 VideoFly` | `{logoEmoji} {projectName}` | All files |
-| 2 | `support@videofly.app` | `{supportEmail}` | All files |
-| 3 | `privacy@videofly.app` | `privacy@{domain}` | All files |
-| 4 | `videofly.app` | `{domain}` | All files |
-| 5 | `VideoFly` | `{projectName}` | All files |
-| 6 | `videofly_` | `{localStoragePrefix}_` | localStorage keys only |
-| 7 | `"videofly"` | `"{packageName}"` | package.json name only |
+| 1 | `🎬 NovaMotion` | `{logoEmoji} {projectName}` | All files |
+| 2 | `support@yourdomain.com` | `{settings.supportEmail}` (dynamic from site_settings) | All files |
+| 3 | `privacy@yourdomain.com` | `{settings.supportEmail}` (dynamic from site_settings) | All files |
+| 4 | `yourdomain.com` | `{domain}` | All files |
+| 5 | `NovaMotion` | `{projectName}` | All files |
+| 6 | `novamotion_` | `{localStoragePrefix}_` | localStorage keys only |
+| 7 | `"novamotion"` | `"{packageName}"` | package.json name only |
 
 **Order matters:** Replace longer/more specific patterns first to avoid partial matches.
 
@@ -27,7 +27,7 @@ Process files in this order. Read each file before editing.
 - `package.json` — name field only
 
 ### P2 — i18n Messages
-- `src/messages/en.json` — all "VideoFly", emails, Metadata, FAQ, Mail, Emails sections
+- `src/messages/en.json` — all "NovaMotion", emails, Metadata, FAQ, Mail, Emails sections
 - `src/messages/zh.json` — same as above in Chinese
 
 ### P3 — Legal Pages

@@ -37,7 +37,7 @@ export const WelcomeEmail = ({
   name = "",
   locale = "en",
   translations,
-  appUrl = "https://videofly.app",
+  appUrl = process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000",
 }: WelcomeEmailProps) => {
   const currentYear = new Date().getFullYear();
 
@@ -68,7 +68,7 @@ export const WelcomeEmail = ({
                 color: "#18181b",
               }}
             >
-              VideoFly
+              NovaMotion
             </Text>
           </Section>
 

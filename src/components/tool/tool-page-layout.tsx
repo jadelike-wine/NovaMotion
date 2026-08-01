@@ -32,6 +32,7 @@ import { ToolLandingPage } from "@/components/tool/tool-landing-page";
 import { VideoHistoryPanel } from "@/components/tool/video-history-panel";
 import { toast } from "sonner";
 
+// Legacy compatibility key. Do not rename without a migration.
 const TOOL_PREFILL_KEY = "videofly_tool_prefill";
 
 // ============================================================================
@@ -89,6 +90,7 @@ export function ToolPageLayout({
   const { openModal } = useUpgradeModal();
   const { shouldNotify, markNotified, resetNotification } = useNotificationDeduplication();
   const videoIdFromQuery = searchParams.get("id");
+  // Legacy compatibility key. Do not rename without a migration.
   const NOTIFICATION_ASKED_KEY = "videofly_notification_asked";
   const tNotify = useTranslations("Notifications");
   const tTool = useTranslations("ToolPage");

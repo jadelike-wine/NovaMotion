@@ -1,8 +1,12 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Settings, FileText, ExternalLink } from "@/components/ui/icons";
+import { getSiteSettings } from "@/lib/site-settings";
+import { SiteSettingsForm } from "@/components/admin/site-settings-form";
 
-export default function AdminSettingsPage() {
+export default async function AdminSettingsPage() {
+  const settings = await getSiteSettings();
+
   return (
     <div className="space-y-6">
       <div>
@@ -13,6 +17,19 @@ export default function AdminSettingsPage() {
       </div>
 
       <div className="grid gap-6 md:grid-cols-2">
+        {/* Brand Contact Config */}
+        <Card className="md:col-span-2">
+          <CardHeader>
+            <CardTitle className="flex items-center gap-2">
+              <Settings className="h-5 w-5" />
+              品牌联系信息
+            </CardTitle>
+          </CardHeader>
+          <CardContent>
+            <SiteSettingsForm initial={settings} />
+          </CardContent>
+        </Card>
+
         {/* Pricing Config */}
         <Card>
           <CardHeader>
@@ -37,8 +54,8 @@ export default function AdminSettingsPage() {
                 <span className="text-green-600">✓ 支持</span>
               </div>
             </div>
-            <Button asChild className="w-full">
-              <a href="https://docs.videofly.app" target="_blank" rel="noopener noreferrer">
+            <Button asChild className="w-full" disabled={!settings.docsUrl}>
+              <a href={settings.docsUrl || "#"} target="_blank" rel="noopener noreferrer" aria-disabled={!settings.docsUrl}>
                 <FileText className="h-4 w-4 mr-2" />
                 查看配置文档
                 <ExternalLink className="h-4 w-4 ml-2" />
@@ -71,8 +88,8 @@ export default function AdminSettingsPage() {
                 <span className="text-green-600">✓ 支持</span>
               </div>
             </div>
-            <Button asChild variant="outline" className="w-full">
-              <a href="https://docs.videofly.app" target="_blank" rel="noopener noreferrer">
+            <Button asChild variant="outline" className="w-full" disabled={!settings.docsUrl}>
+              <a href={settings.docsUrl || "#"} target="_blank" rel="noopener noreferrer" aria-disabled={!settings.docsUrl}>
                 <FileText className="h-4 w-4 mr-2" />
                 查看快速开始
                 <ExternalLink className="h-4 w-4 ml-2" />

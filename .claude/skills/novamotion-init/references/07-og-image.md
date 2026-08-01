@@ -6,7 +6,7 @@ Create a branded Open Graph image (1200x630) for social sharing.
 
 ### 7.1 Create OG Image Route
 
-Create `src/app/og-image/page.tsx` based on template at `.claude/skills/videofly-init/templates/og-image-page.tsx`.
+Create `src/app/og-image/page.tsx` based on template at `.claude/skills/novamotion-init/templates/og-image-page.tsx`.
 
 Replace placeholders:
 - `{{PROJECT_NAME}}` → projectName
@@ -58,7 +58,7 @@ If Playwright is not available:
 ## Alternative: Extract from Reference URL
 
 If referenceUrl was provided:
-1. Run `python3 .claude/skills/videofly-init/scripts/fetch-og-image.py "{referenceUrl}" "public/og.png"`
+1. Run `python3 .claude/skills/novamotion-init/scripts/fetch-og-image.py "{referenceUrl}" "public/og.png"`
 2. If successful, skip generating a new OG image
 3. If failed (no OG image found), proceed with HTML page approach
 

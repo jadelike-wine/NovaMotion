@@ -35,7 +35,7 @@ export const ResetPasswordEmail = ({
   locale = "en",
   translations,
   resetUrl,
-  appUrl = "https://videofly.app",
+  appUrl = process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000",
 }: ResetPasswordEmailProps) => {
   const currentYear = new Date().getFullYear();
 
@@ -66,7 +66,7 @@ export const ResetPasswordEmail = ({
                 color: "#18181b",
               }}
             >
-              VideoFly
+              NovaMotion
             </Text>
           </Section>
 

@@ -28,6 +28,7 @@ export function useNotificationDeduplication() {
       return;
     }
 
+    // Legacy compatibility key. Do not rename without a migration.
     const channel = new BroadcastChannel("videofly-notifications");
     channelRef.current = channel;
 
