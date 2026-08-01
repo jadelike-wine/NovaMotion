@@ -39,6 +39,7 @@ import {
   AlertDialogTitle,
 } from "@/components/ui/alert-dialog";
 
+// Legacy compatibility keys. Do not rename without a migration.
 const PENDING_PROMPT_KEY = "videofly_pending_prompt";
 const PENDING_IMAGE_KEY = "videofly_pending_image";
 const NOTIFICATION_ASKED_KEY = "videofly_notification_asked";

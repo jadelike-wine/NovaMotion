@@ -1,6 +1,6 @@
-# VideoFly 文档中心
+# NovaMotion 文档中心
 
-欢迎来到 VideoFly 项目文档中心。本文档提供了所有项目文档的导航和快速索引。
+欢迎来到 NovaMotion 项目文档中心。本文档提供了所有项目文档的导航和快速索引。
 
 ---
 
@@ -89,7 +89,7 @@
 
 ### 场景 1：新项目配置
 
-如果你正在设置新的 VideoFly 实例，按以下顺序阅读：
+如果你正在设置新的 NovaMotion 实例，按以下顺序阅读：
 
 1. **[配置指南](./CONFIGURATION_GUIDE.md)** - 了解所有配置项
 2. **[价格方案参考](./spec/PRICING_REFERENCE.md)** - 理解定价策略

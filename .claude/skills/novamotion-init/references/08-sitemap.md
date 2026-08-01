@@ -28,6 +28,6 @@ sitemap: `${process.env.NEXT_PUBLIC_APP_URL || "https://{domain}"}/sitemap.xml`
 ## Minimal Changes Expected
 
 This step is mostly verification. Only modify if:
-- The fallback URL still says `videofly.app`
+- The fallback URL still says a placeholder domain
 - The `/og-image` route needs to be added to excludes
 - New marketing pages were added that need inclusion

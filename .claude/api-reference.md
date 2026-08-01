@@ -1,4 +1,4 @@
-# VideoFly API Reference
+# NovaMotion API Reference
 
 Base URL: `/api/v1`
 

@@ -11,7 +11,7 @@ interface WelcomeEmailProps extends BaseEmailProps {
 
 export default function WelcomeEmail({
   name = "there",
-  appUrl = "https://videofly.app",
+  appUrl = process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000",
   locale,
   messages,
 }: WelcomeEmailProps) {
@@ -62,9 +62,9 @@ WelcomeEmail.PreviewProps = {
       },
       welcome: {
         greeting: "Hi {name},",
-        title: "Welcome to VideoFly!",
-        body: "Thank you for joining VideoFly! We're thrilled to have you on board.",
-        features: "With VideoFly, you can:",
+        title: "Welcome to NovaMotion!",
+        body: "Thank you for joining NovaMotion! We're thrilled to have you on board.",
+        features: "With NovaMotion, you can:",
         featuresList: {
           generate: "Generate stunning AI videos in minutes",
           models: "Use multiple AI models like Sora 2, Veo 3.1, and more",
@@ -76,5 +76,5 @@ WelcomeEmail.PreviewProps = {
     },
   },
   name: "John Doe",
-  appUrl: "https://videofly.app",
+  appUrl: "http://localhost:3000",
 };

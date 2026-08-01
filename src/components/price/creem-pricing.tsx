@@ -21,6 +21,7 @@ import { toast } from "sonner";
 import { Check } from "lucide-react";
 
 import { useSigninModal } from "@/hooks/use-signin-modal";
+import { useSiteSettings } from "@/hooks/use-site-settings";
 import {
   canPurchasePackages,
   getLocalizedOnetimePackages,
@@ -61,6 +62,7 @@ export function CreemPricing({
   const [isPending, startTransition] = useTransition();
   const [loadingProductId, setLoadingProductId] = useState<string | null>(null);
   const signInModal = useSigninModal();
+  const { supportEmail } = useSiteSettings();
 
   // 组织产品数据
   const allSubscriptionProducts = useMemo(
@@ -265,14 +267,20 @@ export function CreemPricing({
       {/* 底部联系信息 */}
       <p className="mt-16 text-center text-base text-muted-foreground">
         <Balancer>
-          Email{" "}
-          <a
-            className="font-medium text-primary hover:underline"
-            href="mailto:support@videofly.app"
-          >
-            support@videofly.app
-          </a>{" "}
-          {dictPrice.contact}
+          {supportEmail ? (
+            <>
+              Email{" "}
+              <a
+                className="font-medium text-primary hover:underline"
+                href={`mailto:${supportEmail}`}
+              >
+                {supportEmail}
+              </a>{" "}
+              {dictPrice.contact}
+            </>
+          ) : (
+            dictPrice.contact_no_email
+          )}
           <br />
           <strong>{dictPrice.contact_2}</strong>
         </Balancer>

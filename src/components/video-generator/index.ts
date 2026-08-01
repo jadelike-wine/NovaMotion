@@ -1,5 +1,5 @@
 /**
- * @videofly/video-generator
+ * @novamotion/video-generator
  *
  * A fully configurable AI video/image generation input component.
  *

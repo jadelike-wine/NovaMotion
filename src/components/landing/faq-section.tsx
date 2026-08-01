@@ -10,6 +10,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion";
 import { BlurFade } from "@/components/magicui/blur-fade";
+import { useSiteSettings } from "@/hooks/use-site-settings";
 
 interface FAQItem {
   questionKey: string;
@@ -45,6 +46,7 @@ const faqData: FAQItem[] = [
 
 export function FAQSection() {
   const t = useTranslations("FAQ");
+  const { supportEmail } = useSiteSettings();
 
   // Generate FAQPage JSON-LD for SEO/GEO (+40% AI search visibility)
   const faqJsonLd = {
@@ -141,12 +143,16 @@ export function FAQSection() {
             >
               <p className="text-muted-foreground">
                 {t("contact")}
-                <a
-                  href="mailto:support@videofly.app"
-                  className="text-primary hover:underline mx-1"
-                >
-                  support@videofly.app
-                </a>
+                {supportEmail ? (
+                  <a
+                    href={`mailto:${supportEmail}`}
+                    className="text-primary hover:underline mx-1"
+                  >
+                    {supportEmail}
+                  </a>
+                ) : (
+                  <span className="mx-1">{t("contact_no_email")}</span>
+                )}
               </p>
             </motion.div>
           </BlurFade>

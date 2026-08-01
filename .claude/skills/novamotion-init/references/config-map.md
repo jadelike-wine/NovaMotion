@@ -38,7 +38,7 @@ Same structure as en.json with Chinese content.
 ### `src/app/[locale]/(marketing)/privacy/page.tsx`
 - `metadata.title` — "Privacy Policy - {projectName}"
 - `metadata.description` — "Privacy Policy for {projectName}"
-- Body: all "VideoFly" → projectName, emails → supportEmail/privacyEmail
+- Body: all "NovaMotion" → projectName, emails → supportEmail/privacyEmail
 
 ### `src/app/[locale]/(marketing)/terms/page.tsx`
 - Same pattern as privacy
@@ -75,7 +75,7 @@ Same structure as en.json with Chinese content.
 ## UI Components
 
 ### `src/components/landing/header.tsx`
-- Logo text: 3 instances of "🎬 VideoFly"
+- Logo text: 3 instances of "🎬 NovaMotion"
 
 ### `src/components/landing/footer.tsx`
 - Logo text (line ~55)
@@ -92,16 +92,16 @@ Same structure as en.json with Chinese content.
 - Logo alt text
 
 ### `src/components/landing/faq-section.tsx`
-- `mailto:support@videofly.app` and display text
+- Uses `{supportEmail}` from `useSiteSettings()` hook; hides email link when empty
 
 ### `src/components/price/pricing-cards.tsx`
-- `mailto:support@videofly.app` (line ~136)
+- Uses `{supportEmail}` from `useSiteSettings()` hook; hides email link when empty
 
 ### `src/components/price/aceternity-pricing.tsx`
-- `mailto:support@videofly.app` (line ~234)
+- Uses `{supportEmail}` from `useSiteSettings()` hook; hides email link when empty
 
 ### `src/components/price/creem-pricing.tsx`
-- `mailto:support@videofly.app` (line ~271)
+- Uses `{supportEmail}` from `useSiteSettings()` hook; hides email link when empty
 
 ## SEO & Metadata
 
@@ -131,20 +131,20 @@ Same structure as en.json with Chinese content.
 ## LocalStorage Keys
 
 ### `src/components/landing/hero-section.tsx`
-- `videofly_pending_prompt` → `{localStoragePrefix}_pending_prompt`
-- `videofly_pending_image` → `{localStoragePrefix}_pending_image`
-- `videofly_notification_asked` → `{localStoragePrefix}_notification_asked`
-- `videofly_tool_prefill` → `{localStoragePrefix}_tool_prefill`
+- `novamotion_pending_prompt` → `{localStoragePrefix}_pending_prompt`
+- `novamotion_pending_image` → `{localStoragePrefix}_pending_image`
+- `novamotion_notification_asked` → `{localStoragePrefix}_notification_asked`
+- `novamotion_tool_prefill` → `{localStoragePrefix}_tool_prefill`
 
 ### `src/lib/video-task-storage.ts`
-- `videofly_video_tasks` → `{localStoragePrefix}_video_tasks`
+- `novamotion_video_tasks` → `{localStoragePrefix}_video_tasks`
 
 ### `src/lib/video-history-storage.ts`
-- `videofly_video_history` → `{localStoragePrefix}_video_history`
+- `novamotion_video_history` → `{localStoragePrefix}_video_history`
 
 ### `src/components/tool/tool-page-layout.tsx`
-- `videofly_tool_prefill` → `{localStoragePrefix}_tool_prefill`
-- `videofly_notification_asked` → `{localStoragePrefix}_notification_asked`
+- `novamotion_tool_prefill` → `{localStoragePrefix}_tool_prefill`
+- `novamotion_notification_asked` → `{localStoragePrefix}_notification_asked`
 
 ## Admin
 

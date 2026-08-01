@@ -1,7 +1,7 @@
 ---
 name: pricing-setup
 description: >
-  VideoFly 商品定价与积分配置向导。引导用户完成订阅产品定价、积分包配置、新用户赠送积分设置，
+  NovaMotion 商品定价与积分配置向导。引导用户完成订阅产品定价、积分包配置、新用户赠送积分设置，
   自动更新 pricing-user.ts 代码和 price-data.ts / price-faq-data.ts 展示数据，
   最终生成 Creem 后台操作指南 markdown 文档，帮助用户在 Creem 创建商品并回填 Product ID。
   触发词："配置定价"、"设置价格"、"pricing setup"、"配置积分"、"设置积分包"、
@@ -9,9 +9,9 @@ description: >
   "creem 商品"、"创建商品"、"product setup"。
 ---
 
-# VideoFly 商品定价与积分配置向导
+# NovaMotion 商品定价与积分配置向导
 
-通过多轮对话引导用户完成 VideoFly 的完整定价体系配置。
+通过多轮对话引导用户完成 NovaMotion 的完整定价体系配置。
 
 ## 成本模型
 

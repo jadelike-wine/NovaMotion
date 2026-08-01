@@ -1,6 +1,6 @@
-# VideoFly 配置指南
+# NovaMotion 配置指南
 
-本文档是 VideoFly 项目的主要配置指南，涵盖了所有核心配置文件的说明和修改方法。
+本文档是 NovaMotion 项目的主要配置指南，涵盖了所有核心配置文件的说明和修改方法。
 
 ---
 
@@ -32,7 +32,7 @@ DATABASE_URL=postgresql://user:password@host:port/database?sslmode=require
 # ============================================
 # 应用配置
 # ============================================
-NEXT_PUBLIC_APP_URL=https://videofly.app  # 生产环境域名
+NEXT_PUBLIC_APP_URL=https://yourdomain.com  # 生产环境域名
 NEXT_PUBLIC_BILLING_PROVIDER=creem        # 支付提供商
 
 # ============================================
@@ -50,7 +50,7 @@ KIE_API_KEY=your_kie_api_key
 DEFAULT_AI_PROVIDER=evolink
 
 # 回调配置（生产环境必须配置）
-AI_CALLBACK_URL=https://videofly.app/api/v1/video/callback
+AI_CALLBACK_URL=https://yourdomain.com/api/v1/video/callback
 CALLBACK_HMAC_SECRET=your_callback_secret_for_hmac
 
 # ============================================
@@ -60,7 +60,7 @@ STORAGE_ENDPOINT=https://your-r2-endpoint.r2.cloudflarestorage.com
 STORAGE_REGION=auto
 STORAGE_ACCESS_KEY=your_access_key
 STORAGE_SECRET_KEY=your_secret_key
-STORAGE_BUCKET=videofly
+STORAGE_BUCKET=novamotion
 STORAGE_DOMAIN=https://pub-xxx.r2.dev
 
 # ============================================
@@ -73,12 +73,12 @@ CREEM_WEBHOOK_SECRET=creem_webhook_secret
 # 邮件配置（Resend）
 # ============================================
 RESEND_API_KEY=re_xxx
-RESEND_FROM=support@videofly.app
+RESEND_FROM=support@yourdomain.com
 
 # ============================================
 # 管理员账号
 # ============================================
-ADMIN_EMAIL=admin@videofly.app
+ADMIN_EMAIL=admin@yourdomain.com
 
 # ============================================
 # 分析配置（可选）
@@ -203,7 +203,7 @@ export const SUBSCRIPTION_PRODUCTS = [
 
 在 Creem Dashboard 中设置 Webhook URL：
 ```
-https://videofly.app/api/auth/creem/webhook
+https://yourdomain.com/api/auth/creem/webhook
 ```
 
 ### 📊 当前价格方案
@@ -354,7 +354,7 @@ STORAGE_ENDPOINT=https://xxx.r2.cloudflarestorage.com
 STORAGE_REGION=auto
 STORAGE_ACCESS_KEY=your_access_key
 STORAGE_SECRET_KEY=your_secret_key
-STORAGE_BUCKET=videofly
+STORAGE_BUCKET=novamotion
 STORAGE_DOMAIN=https://pub-xxx.r2.dev
 ```
 
@@ -385,7 +385,7 @@ await storageService.delete("videos/video-uuid.mp4");
 
 ```bash
 RESEND_API_KEY=re_xxx
-RESEND_FROM=support@videofly.app
+RESEND_FROM=support@yourdomain.com
 ```
 
 #### 邮件模板

@@ -1,6 +1,6 @@
-# VideoFly 🎬
+# NovaMotion 星动影像
 
-一个生产级 AI 视频生成 SaaS 模板，基于 Next.js 15 构建，支持 Sora 2、Veo 3.1 等先进 AI 模型。
+NovaMotion（星动影像）是一套面向商业化场景的 AI 视频生成 SaaS 平台，支持用户通过积分生成 AI 视频。
 
 > 本模板帮助你在几分钟内搭建自己的 AI 视频生成平台，包含完整的用户认证、积分系统、支付集成和精美的 UI 界面。
 
@@ -45,9 +45,9 @@
 ### 安装
 
 ```bash
-# 克隆仓库（使用模板仓库）
-git clone https://github.com/zifeixu85/videofly-template.git your-project
-cd your-project
+# 克隆仓库
+git clone https://github.com/jadelike-wine/NovaMotion.git
+cd NovaMotion
 
 # 安装依赖
 pnpm install
@@ -67,12 +67,12 @@ pnpm dev
 
 ### 一键部署
 
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/zifeixu85/videofly-template)
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/jadelike-wine/NovaMotion)
 
 ## 📁 项目结构
 
 ```
-videofly/
+novamotion/
 ├── src/
 │   ├── app/                  # Next.js App Router 页面
 │   │   ├── api/              # API 路由
@@ -127,7 +127,7 @@ DATABASE_URL='postgresql://user:pass@host:5432/db'
 
 # 认证
 BETTER_AUTH_SECRET='your-secret'
-NEXT_PUBLIC_APP_URL='http://localhost:3000'
+NEXT_PUBLIC_APP_URL='https://enovamotion.com'
 GOOGLE_CLIENT_ID='your-google-client-id'
 GOOGLE_CLIENT_SECRET='your-google-client-secret'
 
@@ -141,7 +141,7 @@ STORAGE_DOMAIN='https://your-domain.com'
 # AI 提供商
 EVOLINK_API_KEY='your-evolink-key'
 KIE_API_KEY='your-kie-key'
-AI_CALLBACK_URL='https://your-domain.com/api/v1/video/callback'
+AI_CALLBACK_URL='https://enovamotion.com/api/v1/video/callback'
 AI_CALLBACK_SECRET='your-callback-secret'
 
 # 支付 - Creem (主要)
@@ -153,7 +153,7 @@ STRIPE_API_KEY='your-stripe-key'
 STRIPE_WEBHOOK_SECRET='your-stripe-webhook-secret'
 
 # 邮件
-RESEND_FROM='noreply@yourdomain.com'
+RESEND_FROM='NovaMotion <noreply@enovamotion.com>'
 ```
 
 ## 🔄 同步模板更新
@@ -194,7 +194,7 @@ git checkout upstream/main -- src/components/landing
 1. **备份数据** - 同步前备份你的 `.env.local` 和数据库
 2. **处理冲突** - 如果有冲突，需要手动解决
 3. **环境变量** - 模板更新可能新增环境变量，检查 `.env.example`
-4. **数据库迁移** - 如有 schema 变更，执行 `pnpm db:migrate`
+4. **数据库升级** - 如有 schema 变更，执行 `pnpm db:push`
 
 ## 🧩 近期更新（2026-01-26）
 
@@ -219,6 +219,10 @@ git checkout upstream/main -- src/components/landing
 - [ ] 团队协作功能
 - [ ] API 访问
 - [ ] Webhooks 导出
+
+## 上游模板
+
+本项目基于 `https://github.com/zifeixu85/videofly-template` 进行二次开发，并保留上游同步能力。
 
 ## 📄 许可证
 

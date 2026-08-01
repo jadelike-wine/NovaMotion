@@ -41,6 +41,7 @@ interface VideoHistoryStorageData {
 // ============================================================================
 
 class VideoHistoryStorage {
+  // Legacy compatibility key. Do not rename without a migration.
   private readonly STORAGE_KEY = "videofly_video_history";
   private readonly MAX_ITEMS = 20;
 

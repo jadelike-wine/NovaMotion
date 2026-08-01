@@ -1,6 +1,6 @@
 {
   "project": {
-    "name": "VideoFly",
+    "name": "NovaMotion",
     "description": "AI Video Generation Platform",
     "version": "0.1.0"
   },
@@ -18,7 +18,7 @@
     "semicolons": true,
     "trailingComma": "es5",
     "tabWidth": 2,
-    "importOrder": ["react", "next", "@videofly/*", "~/", "./"]
+    "importOrder": ["react", "next", "@novamotion/*", "~/", "./"]
   },
   "paths": {
     "api": "apps/nextjs/src/app/api/v1",

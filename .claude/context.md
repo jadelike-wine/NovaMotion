@@ -1,4 +1,4 @@
-# VideoFly Project Context
+# NovaMotion Project Context
 
 ## Quick Reference
 
@@ -6,30 +6,30 @@
 
 ```typescript
 // Database
-import { db, VideoStatus, CreditTransType } from "@videofly/db";
+import { db, VideoStatus, CreditTransType } from "@novamotion/db";
 
 // Services
-import { creditService } from "@videofly/common/services/credit";
-import { videoService } from "@videofly/common/services/video";
+import { creditService } from "@novamotion/common/services/credit";
+import { videoService } from "@novamotion/common/services/video";
 
 // AI Providers
-import { getProvider, getDefaultProvider } from "@videofly/common/ai";
+import { getProvider, getDefaultProvider } from "@novamotion/common/ai";
 
 // Config
-import { getModelConfig, calculateModelCredits } from "@videofly/common/config/credits";
+import { getModelConfig, calculateModelCredits } from "@novamotion/common/config/credits";
 
 // Storage
-import { getStorage } from "@videofly/common/storage";
+import { getStorage } from "@novamotion/common/storage";
 
 // Auth
-import { auth } from "@videofly/auth";
+import { auth } from "@novamotion/auth";
 
 // UI Components
-import { Button } from "@videofly/ui/button";
-import { toast } from "@videofly/ui/use-toast";
+import { Button } from "@novamotion/ui/button";
+import { toast } from "@novamotion/ui/use-toast";
 
 // Video Generator
-import { VideoGeneratorInput, type SubmitData } from "@videofly/video-generator";
+import { VideoGeneratorInput, type SubmitData } from "@novamotion/video-generator";
 ```
 
 ### API Response Format
@@ -118,12 +118,12 @@ export const CREDIT_PACKAGES: CreditPackageConfig[] = [
 Required environment variables for development:
 
 ```bash
-DATABASE_URL=postgresql://localhost:5432/videofly
+DATABASE_URL=postgresql://localhost:5432/novamotion
 BETTER_AUTH_SECRET=dev-secret-min-32-chars
 STORAGE_ENDPOINT=http://localhost:9000
 STORAGE_ACCESS_KEY=minioadmin
 STORAGE_SECRET_KEY=minioadmin
-STORAGE_BUCKET=videofly
+STORAGE_BUCKET=novamotion
 AI_CALLBACK_URL=http://localhost:3000/api/v1/video/callback
 AI_CALLBACK_SECRET=dev-callback-secret
 ```

@@ -120,10 +120,12 @@ export const headerTools = [
 ];
 
 // 落地页顶部导航 - 文档链接
+// 实际 URL 由后台「品牌联系信息」或 NEXT_PUBLIC_DOCS_URL 环境变量提供。
+// 未配置时 C 端导航隐藏该入口，不渲染空链接。
 export const headerDocs = {
   id: "docs",
   title: "Docs",
-  href: "https://docs.videofly.app",
+  href: "",
   external: true,
 };
 
